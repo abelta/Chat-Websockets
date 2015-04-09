@@ -23,9 +23,8 @@ module ChatWebsockets
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-
-    # Configuration for background jobs.
-    config.active_job.queue_adapter = :delayed_job
+    # Redis.
+    config.cache_store = :redis_store, 'redis://localhost:6379/0/cache', { expires_in: 90.minutes }
     
     # Configuration for Rspec generators.
     config.generators do | g |
