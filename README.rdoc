@@ -1,28 +1,21 @@
-== README
+== Websockets-chat
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a Rails chat application demonstrating the use of Rails with Websockets based on the Websocket-Rails gem.
+No user and session administration is provided and users are randomly generated.
 
-Things you may want to cover:
+== Installation and run
 
-* Ruby version
+* Clone the repository. No migrations needed.
+* Install gem dependencies with `bundle install`.
+* Install Redis database like this:
+    ```
+    wget http://download.redis.io/releases/redis-3.0.0.tar.gz
+    tar xzf redis-3.0.0.tar.gz
+    cd redis-3.0.0
+    make
+    ```
+* Run Redis with `src/redis-server`.
+* Run the server with `rails s`.
+* Run the rake task that will simulate the experience of being in a chat with other people: `rake messages:simulate`.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Now you can see the website at `localhost:3000`, see what other users are posting (simulated, of course) and post your own messages.
