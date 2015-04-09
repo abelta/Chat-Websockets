@@ -1,0 +1,14 @@
+.message_view {
+
+    .user_name {
+        color: #A47851;
+        font-weight: bold;
+    }
+
+    &.mine {
+        .user_name {
+            color: #7F5630;
+        }
+    }
+
+}

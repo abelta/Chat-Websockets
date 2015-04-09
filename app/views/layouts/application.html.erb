@@ -2,13 +2,36 @@
 <html>
 <head>
   <title>ChatWebsockets</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= yield %>
+  
+  <div class="container header">
+    <h1 class="app_logo">Websocket Chat</h1>
+  </div>
 
+  <div class="message_list container" data-widget="message-index">
+  </div>
+
+  <div class="message_new container">
+    
+    <div class="row">
+      <div class="twelve columns">
+        <label class="user_name">Publish as <%= current_user.name -%></label>
+        <input type="text" class="u-full-width" data-widget="message-input" autofocus />
+      </div>
+    </div>
+    
+  </div>
+
+
+  <script>
+    // Store current_user data.
+    window.application = window.application || {};
+    window.application.user = {'name': "<%= current_user.name -%>"};
+  </script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 </body>
 </html>

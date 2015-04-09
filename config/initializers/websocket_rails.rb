@@ -10,7 +10,7 @@ WebsocketRails.setup do |config|
 
   # Set to true if you wish to log the internal websocket_rails events
   # such as the keepalive `websocket_rails.ping` event.
-  # config.log_internal_events = false
+    config.log_internal_events = false
 
   # Change to true to enable standalone server mode
   # Start the standalone server with rake websocket_rails:start_server
@@ -20,7 +20,7 @@ WebsocketRails.setup do |config|
   # Change to true to enable channel synchronization between
   # multiple server instances.
   # * Requires Redis.
-  config.synchronize = false
+  config.synchronize = true
 
   # Prevent Thin from daemonizing (default is true)
   # config.daemonize = false
