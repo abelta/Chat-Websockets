@@ -12,8 +12,12 @@ class MessageInput
 
 
     publish: (text) ->
+        handleSuccess = ->
+            # Do nothing.
+        handleFailure = ->
+            new Flash "There's been an error.", 'error'
         message = user_name: window.application.user.name, text: text
-        @dispatcher.trigger 'messages.create', message
+        @dispatcher.trigger 'messages.create', message, handleSuccess, handleFailure
 
 
 

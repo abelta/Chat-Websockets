@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
 
-  #get 'messages/index'
+  
 
+  
   root to: "application#index"
+
+  get '/manifest.appcache', to: 'application#manifest'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
