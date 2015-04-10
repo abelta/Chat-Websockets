@@ -6,9 +6,5 @@ class ApplicationController < ActionController::Base
   def index
   end
   
-  
-  def manifest
-    send_file 'manifest.appcache', :type => 'text/cache-manifest'
-  end
 
 end

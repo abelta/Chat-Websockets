@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/pascalw/rack-offline.git
+  revision: 355b2ecd88667857b26852a84a297c60fed7fc2d
+  specs:
+    rack-offline (0.6.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -252,6 +258,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   launchy
+  rack-offline!
   rails (= 4.2.0)
   redis-rails
   rspec-rails

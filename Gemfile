@@ -38,6 +38,9 @@ gem 'websocket-rails'
 # Redis.
 gem 'redis-rails'
 
+# Offline manifest.
+gem 'rack-offline', :github => 'pascalw/rack-offline'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'

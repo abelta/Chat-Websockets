@@ -1,11 +1,8 @@
 Rails.application.routes.draw do
 
-  
-
-  
   root to: "application#index"
 
-  get '/manifest.appcache', to: 'application#manifest'
+  get "/application.manifest", to: Rails::Offline
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
